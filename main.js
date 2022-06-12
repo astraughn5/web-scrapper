@@ -20,6 +20,7 @@ const mainFunc = async () => {
 	
 	const plantData = $('.table > tbody > tr')
 	const plantImageUrl = $('.img-responsive').attr('src')
+	const plantDescription = $('.col-sm-5 > p')
 	console.log(plantImageUrl)
 	dataObj.image = plantImageUrl
 		//loop through all table rows and get table data
