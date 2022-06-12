@@ -26,7 +26,6 @@ const mainFunc = async () => {
 		let splitDescription = description.split('Flowering:');
 		console.log(splitDescription)
 	})
-	//console.log(plantImageUrl)
 	
 	dataObj.image = plantImageUrl
 		//loop through all table rows and get table data
