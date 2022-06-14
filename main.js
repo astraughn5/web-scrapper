@@ -20,14 +20,19 @@ const mainFunc = async () => {
 	
 	const plantData = $('.table > tbody > tr')
 	const plantImageUrl = $('.img-responsive').attr('src')
-	const plantDescription = $('.col-sm-5 > p')
-	console.log(plantImageUrl)
+	const plantDescription = $('.col-sm-5')
+	plantDescription.each(function() {
+		let description = $(this).find('p').text(); // get the text in all the b elements
+		let splitDescription = description.split('Flowering:');
+		console.log(splitDescription)
+	})
+	//console.log(plantImageUrl)
+	
 	dataObj.image = plantImageUrl
 		//loop through all table rows and get table data
 	plantData.each(function() {
 	let title = $(this).find('td').text(); // get the text in all the td elements
 	let newStr = title.split('\:'); // convert text (string) into an array
-	
 	newStr.forEach(function (item, index){
 		if (index % 2 === 0){
 			dataObj[item] = newStr[index + 1]
